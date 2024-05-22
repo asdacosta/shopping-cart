@@ -1,0 +1,24 @@
+body * {
+  /* border: 0.2rem solid teal; */
+}
+
+body {
+  background-image: url(../assets/shopHomepage1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  font-size: 1.2rem;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+  background-color: rgba(0, 0, 0, 0.45);
+  height: 100vh;
+}
