@@ -6,7 +6,7 @@
   gap: 0.3rem;
   min-height: 15rem;
   opacity: 0;
-  animation: appear 1s ease-in-out forwards;
+  animation: appear 1.5s ease-in-out forwards;
 }
 
 @keyframes appear {
@@ -27,14 +27,16 @@
   position: absolute;
   right: 0.5rem;
   top: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 .info svg {
   width: 1.2rem;
-  fill: white;
+  fill: rgb(103, 166, 248);
 }
 
 .itemDetails > p {
+  height: 1.5rem;
   padding: 0.2rem 0;
   border-radius: 0.2rem;
   padding-left: 0.5rem;
