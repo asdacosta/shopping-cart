@@ -10,8 +10,8 @@ body {
 
   font-size: 1.2rem;
   color: white;
-  height: 100vh;
-  overflow: hidden;
+  height: 100%;
+  /* overflow: hidden; */
 }
 
 #root {
@@ -21,4 +21,10 @@ body {
   align-items: center; */
   background-color: rgba(0, 0, 0, 0.45);
   height: 100vh;
+}
+
+@media (max-width: 500px) {
+  #root {
+    height: 100%;
+  }
 }
