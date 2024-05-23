@@ -4,7 +4,7 @@ import { ids } from "./ids";
 import { Item } from "./Item";
 
 function HomePage() {
-  const items = ids.map((id) => <Item key={id} />);
+  const items = ids.map((id, index) => <Item key={id} index={index} />);
 
   return (
     <>
