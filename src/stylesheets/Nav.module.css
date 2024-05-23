@@ -1,0 +1,53 @@
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: rgba(103, 166, 248, 0.3);
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.brandName {
+  font-size: 1.2rem;
+  padding-top: 0.1rem;
+  border-top: 0.1rem solid white;
+  border-bottom: 0.1rem solid white;
+  margin-right: auto;
+}
+
+.nav > span {
+  cursor: pointer;
+}
+
+.nav svg {
+  fill: white;
+  width: 1.5rem;
+}
+
+.cart {
+  position: relative;
+}
+
+.quantity {
+  display: none;
+  position: absolute;
+  font-size: 0.9rem;
+  background-color: rgba(5, 17, 32, 0.9);
+  padding: 0.15rem 0.3rem;
+  border-radius: 1rem;
+  left: 0.6rem;
+  bottom: 0.6rem;
+}
+
+@media (max-width: 500px) {
+  .nav {
+    font-size: 1rem;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .nav svg {
+    fill: white;
+    width: 1.2rem;
+  }
+}

@@ -1,0 +1,55 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: 1rem;
+  gap: 0.3rem;
+  min-height: 15rem;
+  opacity: 0;
+  animation: appear 1s ease-in-out forwards;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+
+.itemImage {
+  background-color: rgba(5, 17, 32, 0.9);
+  border-radius: 0.5rem;
+  height: 70%;
+}
+
+.info {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+}
+
+.info svg {
+  width: 1.2rem;
+  fill: white;
+}
+
+.itemDetails > p {
+  padding: 0.2rem 0;
+  border-radius: 0.2rem;
+  padding-left: 0.5rem;
+  background-color: rgba(5, 17, 32, 0.9);
+}
+
+.itemDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.itemDetails button {
+  font-size: 1rem;
+  background-color: rgba(103, 166, 248);
+  border: none;
+  height: 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
