@@ -18,10 +18,12 @@ function Item({ index }) {
       .then((response) => response.json())
       .then((response) => {
         console.log(response);
-        setImageURL(response[index].image);
-        setTitle(response[index].title);
-        setDescription(response[index].description);
-        setPrice(response[index].price);
+        const item = response[index];
+        setImageURL(item.image);
+        setTitle(item.title);
+        setPrice(item.price);
+        const trimDescription = item.description.split(".")[0] + ".";
+        setDescription(trimDescription);
       })
       .catch((error) => console.error(error));
   }, []);
@@ -49,10 +51,15 @@ function Item({ index }) {
           </svg>
         )}
       </span>
-      <div
-        className={itemStyles.itemImage}
-        style={{ backgroundImage: `url(${imageURL})` }}
-      ></div>
+      {!showDescription ? (
+        <div
+          className={itemStyles.itemImage}
+          style={{ backgroundImage: `url(${imageURL})` }}
+        ></div>
+      ) : (
+        <div className={itemStyles.itemImage}></div>
+      )}
+
       <div className={itemStyles.itemDetails}>
         <p>{title}</p>
         <p>$ {price}</p>
