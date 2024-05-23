@@ -39,6 +39,9 @@
   border-radius: 0.2rem;
   padding-left: 0.5rem;
   background-color: rgba(5, 17, 32, 0.9);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .itemDetails {
