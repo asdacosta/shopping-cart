@@ -19,6 +19,8 @@
   background-color: rgba(5, 17, 32, 0.9);
   border-radius: 0.5rem;
   height: 70%;
+  background-position: center;
+  background-size: cover;
 }
 
 .info {
