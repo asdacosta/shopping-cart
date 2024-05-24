@@ -1,0 +1,7 @@
+.items {
+  align-self: center;
+  display: grid;
+  grid-template: repeat(2, 20rem) / repeat(4, 12rem);
+  justify-content: center;
+  gap: 2rem;
+}
