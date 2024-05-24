@@ -4,10 +4,10 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  margin-top: 10rem;
+  margin-top: 8rem;
   transform: translateY(-10rem);
   opacity: 0;
-  animation: comeThrough 0.7s ease-in-out forwards;
+  animation: comeThrough 1s ease-in-out forwards;
 }
 
 @keyframes comeThrough {
@@ -47,7 +47,7 @@
   grid-template: repeat(2, 1fr) / repeat(2, 13rem);
   gap: 1rem;
   padding: 1rem;
-  margin: 2rem;
+  margin: 0 2rem;
   background-color: rgba(103, 166, 248, 0.3);
   border-radius: 0.5rem;
   min-width: 50rem;
