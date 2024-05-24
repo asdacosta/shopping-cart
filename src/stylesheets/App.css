@@ -17,14 +17,13 @@ body {
 #root {
   display: flex;
   flex-direction: column;
+  letter-spacing: 0.1rem;
   gap: 2rem;
-  /* justify-content: center;
-  align-items: center; */
   background-color: rgba(0, 0, 0, 0.45);
   height: 100vh;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
   #root {
     height: 100%;
   }
