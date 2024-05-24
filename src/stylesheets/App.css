@@ -1,5 +1,5 @@
 body * {
-  /* border: 0.2rem solid teal; */
+  border: 0.2rem solid teal;
 }
 
 body {
@@ -24,6 +24,12 @@ body {
 }
 
 @media (max-width: 900px) {
+  #root {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 500px) {
   #root {
     height: 100%;
   }
