@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
 import itemStyles from "../stylesheets/Item.module.css";
 
-function Item({ itemResponse }) {
+function Item({ itemResponse, displayButton = "auto" }) {
   const [showDescription, setShowDescription] = useState(false);
   const [pointer, setPointer] = useState("auto");
+  const [added, setAdded] = useState(false);
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     if (!itemResponse) {
       setPointer("none");
     }
-  }, []);
+  }, [itemResponse]);
 
   function triggerShow() {
     setShowDescription(true);
@@ -17,6 +19,24 @@ function Item({ itemResponse }) {
 
   function triggerHide() {
     setShowDescription(false);
+  }
+
+  function triggerAdded() {
+    setAdded(true);
+  }
+
+  function decrement() {
+    setQuantity((prevQuantity) => {
+      if (prevQuantity === 1) {
+        setAdded(false);
+        return prevQuantity;
+      }
+      return prevQuantity - 1;
+    });
+  }
+
+  function increment() {
+    setQuantity((prevQuantity) => prevQuantity + 1);
   }
 
   return (
@@ -56,7 +76,29 @@ function Item({ itemResponse }) {
       <div className={itemStyles.itemDetails}>
         <p>{itemResponse ? itemResponse.title : ""}</p>
         <p>$ {itemResponse ? itemResponse.price : ""}</p>
-        <button>Add to Cart</button>
+        {!added ? (
+          <button onClick={triggerAdded} style={{ display: displayButton }}>
+            Add to Cart
+          </button>
+        ) : (
+          <p className={itemStyles.added}>
+            <svg
+              onClick={decrement}
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm88 200H296c13.3 0 24 10.7 24 24s-10.7 24-24 24H152c-13.3 0-24-10.7-24-24s10.7-24 24-24z" />
+            </svg>
+            <span>{quantity}</span>
+            <svg
+              onClick={increment}
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z" />
+            </svg>
+          </p>
+        )}
       </div>
     </section>
   );
