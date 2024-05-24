@@ -7,7 +7,7 @@
   margin-top: 10rem;
   transform: translateY(-10rem);
   opacity: 0;
-  animation: comeThrough 1s ease-in-out forwards;
+  animation: comeThrough 0.7s ease-in-out forwards;
 }
 
 @keyframes comeThrough {
@@ -22,13 +22,21 @@
   cursor: context-menu;
 }
 
-.button {
+.link {
   font-size: 1rem;
   font-weight: 600;
-  background-color: rgba(103, 166, 248);
+  color: black;
   padding: 0.5rem;
+  background-color: rgba(103, 166, 248);
   border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
+}
+
+.link:hover {
+  color: white;
+  background-color: rgba(5, 17, 32, 0.9);
+  border: 0.1rem solid rgb(103, 166, 248);
 }
 
 .items {
