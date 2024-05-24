@@ -1,15 +1,26 @@
 import navStyles from "../stylesheets/Nav.module.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
-function Nav({ page }) {
+function Nav() {
+  const [page, setPage] = useState("home");
+
+  function highlightShop() {
+    setPage("shop");
+  }
+  function highlightHome() {
+    setPage("home");
+  }
+
   return (
     <nav className={navStyles.nav}>
-      <span className={navStyles.brandName}>
+      <span onClick={highlightHome} className={navStyles.brandName}>
         <Link to="/" className={navStyles.link}>
           EverTrend
         </Link>
       </span>
       <span
+        onClick={highlightHome}
         className={navStyles.home}
         style={page === "home" ? { borderBottom: "0.1rem solid white" } : null}
       >
@@ -18,6 +29,7 @@ function Nav({ page }) {
         </Link>
       </span>
       <span
+        onClick={highlightShop}
         className={navStyles.shop}
         style={page === "shop" ? { borderBottom: "0.1rem solid white" } : null}
       >
