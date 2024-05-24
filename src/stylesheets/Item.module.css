@@ -6,7 +6,7 @@
   gap: 0.3rem;
   min-height: 15rem;
   opacity: 0;
-  animation: appear 1.5s ease-in-out forwards;
+  animation: appear 0.5s ease-in-out forwards;
 }
 
 @keyframes appear {
@@ -16,11 +16,20 @@
 }
 
 .itemImage {
+  display: flex;
+  justify-content: center;
   background-color: rgba(5, 17, 32, 0.9);
   border-radius: 0.5rem;
   height: 12rem;
   overflow: hidden;
   cursor: pointer;
+}
+
+.emptyBox {
+  align-self: center;
+  padding-top: 0.1rem;
+  border-top: 0.1rem solid white;
+  border-bottom: 0.1rem solid white;
 }
 
 .itemImage > img {
@@ -72,5 +81,12 @@
   height: 1.5rem;
   border-radius: 0.5rem;
   margin-top: 0.3rem;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
+}
+
+.itemDetails button:hover {
+  color: white;
+  background-color: rgba(5, 17, 32, 0.9);
+  border: 0.1rem solid rgb(103, 166, 248);
 }
