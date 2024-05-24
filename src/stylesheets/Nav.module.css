@@ -19,6 +19,10 @@
   cursor: pointer;
 }
 
+.link {
+  color: white;
+}
+
 .nav svg {
   fill: white;
   width: 1.5rem;
