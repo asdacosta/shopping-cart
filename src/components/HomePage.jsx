@@ -32,7 +32,7 @@ function HomePage() {
 
   return (
     <>
-      <Nav />
+      <Nav page="home" />
       <section className={homeStyles.homeTitle}>
         <h2 className={homeStyles.header2}>Discover Latest Trends</h2>
         <div>
