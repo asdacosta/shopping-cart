@@ -26,7 +26,7 @@ function WelcomePage() {
   }
 
   const items = ids.map((id, index) => (
-    <Item key={id} itemResponse={response[index]} />
+    <Item key={id} itemResponse={response[index]} displayButton="none" />
   ));
 
   return (
