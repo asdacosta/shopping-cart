@@ -1,5 +1,6 @@
 import { ids } from "./ids";
 import { Item } from "./Item";
+import { Nav } from "./Nav";
 import { useState, useEffect } from "react";
 import shopStyles from "../stylesheets/ShopPage.module.css";
 
@@ -30,10 +31,13 @@ function ShopPage() {
   const emptyItems = ids.map((id) => <Item key={id} />);
 
   return (
-    <section className={shopStyles.items}>
-      {items}
-      {emptyItems}
-    </section>
+    <>
+      <Nav page="shop" />
+      <section className={shopStyles.items}>
+        {items}
+        {emptyItems}
+      </section>
+    </>
   );
 }
 
