@@ -3,5 +3,23 @@
   display: grid;
   grid-template: repeat(2, 20rem) / repeat(4, 12rem);
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .items {
+    grid-template: repeat(3, 20rem) / repeat(3, 12rem);
+  }
+}
+
+@media (max-width: 650px) {
+  .items {
+    grid-template: repeat(4, 17rem) / repeat(2, 10rem);
+  }
+}
+
+@media (max-width: 370px) {
+  .items {
+    grid-template: repeat(8, 20rem) / repeat(1, 12rem);
+  }
 }
