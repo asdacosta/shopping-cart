@@ -57,7 +57,7 @@
   fill: rgb(103, 166, 248);
 }
 
-.itemDetails > p {
+.itemDetails > p:not(:last-child) {
   height: 1.5rem;
   padding: 0.2rem 0;
   padding-left: 0.5rem;
@@ -89,4 +89,24 @@
   color: white;
   background-color: rgba(5, 17, 32, 0.9);
   border: 0.1rem solid rgb(103, 166, 248);
+}
+
+.added {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 0.3rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(5, 17, 32, 0.9);
+}
+
+.added svg {
+  width: 1.2rem;
+  fill: rgb(103, 166, 248);
+  cursor: pointer;
+}
+
+.added span {
+  cursor: context-menu;
 }
