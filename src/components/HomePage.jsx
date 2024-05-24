@@ -1,47 +1,14 @@
-import homeStyles from "../stylesheets/HomePage.module.css";
+import { useState } from "react";
 import { Nav } from "./Nav";
-import { ids } from "./ids";
-import { Item } from "./Item";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 function HomePage() {
-  const [response, setResponse] = useState(null);
-
-  useEffect(() => {
-    fetch(
-      "https://fakestoreapi.com/products/category/" +
-        encodeURIComponent("men's clothing"),
-      { mode: "cors" }
-    )
-      .then((response) => response.json())
-      .then((response) => {
-        console.log(response);
-        setResponse(response);
-      })
-      .catch((error) => console.error(error));
-  }, []);
-
-  if (!response) {
-    return;
-  }
-
-  const items = ids.map((id, index) => (
-    <Item key={id} itemResponse={response[index]} />
-  ));
+  const [navPage, setNavPage] = useState("home");
 
   return (
     <>
-      <Nav page="home" />
-      <section className={homeStyles.homeTitle}>
-        <h2 className={homeStyles.header2}>Discover Latest Trends</h2>
-        <div>
-          <Link className={homeStyles.link} to="shop">
-            Shop Now
-          </Link>
-        </div>
-      </section>
-      <section className={homeStyles.items}>{items}</section>
+      <Nav />
+      <Outlet />
     </>
   );
 }
