@@ -1,12 +1,26 @@
 import navStyles from "../stylesheets/Nav.module.css";
 import { Link } from "react-router-dom";
 
-function Nav() {
+function Nav({ page }) {
   return (
     <nav className={navStyles.nav}>
-      <span className={navStyles.brandName}>EverTrend</span>
-      <span className={navStyles.home}>Home</span>
-      <span className={navStyles.shop}>
+      <span className={navStyles.brandName}>
+        <Link to="/" className={navStyles.link}>
+          EverTrend
+        </Link>
+      </span>
+      <span
+        className={navStyles.home}
+        style={page === "home" ? { borderBottom: "0.1rem solid white" } : null}
+      >
+        <Link to="/" className={navStyles.link}>
+          Home
+        </Link>
+      </span>
+      <span
+        className={navStyles.shop}
+        style={page === "shop" ? { borderBottom: "0.1rem solid white" } : null}
+      >
         <Link to="shop" className={navStyles.link}>
           Shop
         </Link>
