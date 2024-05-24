@@ -1,0 +1,62 @@
+.cover {
+  background-color: rgba(103, 166, 248, 0.3);
+  display: flex;
+  flex-direction: column;
+
+  align-self: center;
+  box-shadow: 0 0 0.5rem 0.1rem white;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  width: 0;
+  flex: 1;
+  opacity: 0;
+  animation: reveal 0.5s ease-in-out forwards;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    width: 50rem;
+  }
+}
+
+.header1,
+.header2 {
+  font-weight: 700;
+  margin: 2rem 0;
+  padding: 0 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header2 {
+  text-align: right;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.link {
+  color: rgb(248, 103, 183);
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.summary button {
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  background-color: rgb(103, 166, 248);
+  cursor: pointer;
+}
