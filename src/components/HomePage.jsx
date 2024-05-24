@@ -3,6 +3,7 @@ import { Nav } from "./Nav";
 import { ids } from "./ids";
 import { Item } from "./Item";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   const [response, setResponse] = useState(null);
@@ -34,7 +35,11 @@ function HomePage() {
       <Nav />
       <section className={homeStyles.homeTitle}>
         <h2 className={homeStyles.header2}>Discover Latest Trends</h2>
-        <button className={homeStyles.button}>Shop Now</button>
+        <div>
+          <Link className={homeStyles.link} to="shop">
+            Shop Now
+          </Link>
+        </div>
       </section>
       <section className={homeStyles.items}>{items}</section>
     </>
