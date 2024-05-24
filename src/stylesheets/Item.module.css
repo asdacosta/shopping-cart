@@ -37,7 +37,7 @@
   width: 100%;
   object-fit: fill;
   object-position: center;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .itemImage > img:hover {
@@ -45,6 +45,7 @@
 }
 
 .info {
+  font-size: 0.9rem;
   position: absolute;
   right: 0.5rem;
   top: 0.5rem;
@@ -71,7 +72,6 @@
 .itemDetails {
   display: flex;
   flex-direction: column;
-  /* gap: 0.3rem; */
 }
 
 .itemDetails button {
