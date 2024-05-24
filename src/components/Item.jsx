@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import itemStyles from "../stylesheets/Item.module.css";
+import { Link } from "react-router-dom";
 
 function Item({ itemResponse, displayButton = "auto" }) {
   const [showDescription, setShowDescription] = useState(false);
@@ -59,16 +60,18 @@ function Item({ itemResponse, displayButton = "auto" }) {
         )}
       </span>
       {!showDescription ? (
-        <div className={itemStyles.itemImage}>
-          {itemResponse ? (
-            <img
-              src={itemResponse ? itemResponse.image : ""}
-              alt={itemResponse ? itemResponse.title : ""}
-            />
-          ) : (
-            <span className={itemStyles.emptyBox}>EverTrend</span>
-          )}
-        </div>
+        <Link to="/itemHome">
+          <div className={itemStyles.itemImage}>
+            {itemResponse ? (
+              <img
+                src={itemResponse ? itemResponse.image : ""}
+                alt={itemResponse ? itemResponse.title : ""}
+              />
+            ) : (
+              <span className={itemStyles.emptyBox}>EverTrend</span>
+            )}
+          </div>
+        </Link>
       ) : (
         <div className={itemStyles.itemImage}></div>
       )}
