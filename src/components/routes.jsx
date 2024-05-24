@@ -3,6 +3,7 @@ import { ShopPage } from "./ShopPage.jsx";
 import { ErrorPage } from "./ErrorPage.jsx";
 import { WelcomePage } from "./WelcomePage.jsx";
 import { Cart } from "./Cart.jsx";
+import { ItemHome } from "./ItemHome.jsx";
 
 const routes = [
   {
@@ -13,6 +14,7 @@ const routes = [
       { index: true, element: <WelcomePage /> },
       { path: "shop", element: <ShopPage /> },
       { path: "cart", element: <Cart /> },
+      { path: "itemHome", element: <ItemHome /> },
     ],
   },
 ];
