@@ -16,7 +16,7 @@
 @keyframes reveal {
   to {
     opacity: 1;
-    width: 50rem;
+    width: 45rem;
   }
 }
 
@@ -25,7 +25,7 @@
   font-weight: 700;
   margin: 2rem 0;
   padding: 0 2rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .header2 {
@@ -59,4 +59,10 @@
   border-radius: 0.5rem;
   background-color: rgb(103, 166, 248);
   cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  .cover {
+    width: 100% !important;
+  }
 }
