@@ -1,5 +1,9 @@
 body * {
-  border: 0.2rem solid teal;
+  /* border: 0.2rem solid teal; */
+}
+
+html {
+  height: 100%;
 }
 
 body {
@@ -20,17 +24,11 @@ body {
   letter-spacing: 0.1rem;
   gap: 2rem;
   background-color: rgba(0, 0, 0, 0.45);
-  height: 100vh;
+  height: 100%;
 }
 
 @media (max-width: 900px) {
-  #root {
-    height: 100vh;
-  }
-}
-
-@media (max-width: 500px) {
-  #root {
-    height: 100%;
+  body {
+    background-repeat: repeat;
   }
 }
