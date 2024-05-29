@@ -3,7 +3,7 @@
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   padding: 1rem;
   box-shadow: 0 0 0.5rem 0.1rem white;
   border-radius: 0.5rem;
