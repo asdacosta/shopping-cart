@@ -8,7 +8,7 @@
   border-radius: 0.5rem;
   margin-bottom: 2rem;
   width: 0;
-  flex: 1;
+  flex: 1 1 50rem;
   opacity: 0;
   animation: reveal 0.5s ease-in-out forwards;
 }
@@ -63,6 +63,6 @@
 
 @media (max-width: 750px) {
   .cover {
-    width: 100% !important;
+    width: 95% !important;
   }
 }
