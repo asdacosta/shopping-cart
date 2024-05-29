@@ -47,7 +47,7 @@
   grid-template: repeat(2, 1fr) / repeat(2, 13rem);
   gap: 1rem;
   padding: 1rem;
-  margin: 0 2rem;
+  margin: 0 2rem 4rem 2rem;
   background-color: rgba(103, 166, 248, 0.3);
   border-radius: 0.5rem;
   min-width: 50rem;
