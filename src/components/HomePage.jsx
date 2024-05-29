@@ -9,18 +9,26 @@ export const ShopContext = createContext({
   setAllQuantity: () => {},
 });
 
+export const PageContext = createContext({
+  page: "",
+  setPage: () => {},
+});
+
 function HomePage() {
   const [allAdded, setAllAdded] = useState([false, false, false, false]);
   const [allQuantity, setAllQuantity] = useState([1, 1, 1, 1]);
+  const [page, setPage] = useState("home");
 
   return (
     <>
-      <Nav />
-      <ShopContext.Provider
-        value={{ allAdded, allQuantity, setAllAdded, setAllQuantity }}
-      >
-        <Outlet />
-      </ShopContext.Provider>
+      <PageContext.Provider value={{ page, setPage }}>
+        <Nav />
+        <ShopContext.Provider
+          value={{ allAdded, allQuantity, setAllAdded, setAllQuantity }}
+        >
+          <Outlet />
+        </ShopContext.Provider>
+      </PageContext.Provider>
     </>
   );
 }
