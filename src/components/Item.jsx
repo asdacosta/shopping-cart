@@ -1,18 +1,34 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import itemStyles from "../stylesheets/Item.module.css";
 import { Link } from "react-router-dom";
+import { ShopContext } from "./HomePage";
 
 function Item({ itemResponse, displayButton = "auto" }) {
   const [showDescription, setShowDescription] = useState(false);
   const [pointer, setPointer] = useState("auto");
-  const [added, setAdded] = useState(false);
-  const [quantity, setQuantity] = useState(1);
+  const { allAdded, setAllAdded, allQuantity, setAllQuantity } =
+    useContext(ShopContext);
+  const [quantity, setQuantity] = useState(allQuantity[itemResponse?.id - 1]);
+  const [added, setAdded] = useState(allAdded[itemResponse?.id - 1]);
 
   useEffect(() => {
     if (!itemResponse) {
       setPointer("none");
+      return;
     }
-  }, [itemResponse]);
+    updateContext();
+  }, [added, quantity]);
+
+  function updateContext() {
+    const newAllAdded = [...allAdded];
+    const index = itemResponse.id - 1;
+    newAllAdded[index] = added;
+    setAllAdded(newAllAdded);
+
+    const newAllQuantity = [...allQuantity];
+    newAllQuantity[index] = quantity;
+    setAllQuantity(newAllQuantity);
+  }
 
   function triggerShow() {
     setShowDescription(true);
@@ -24,12 +40,14 @@ function Item({ itemResponse, displayButton = "auto" }) {
 
   function triggerAdded() {
     setAdded(true);
+    updateContext();
   }
 
   function decrement() {
     setQuantity((prevQuantity) => {
       if (prevQuantity === 1) {
         setAdded(false);
+        updateContext();
         return prevQuantity;
       }
       return prevQuantity - 1;
@@ -38,6 +56,7 @@ function Item({ itemResponse, displayButton = "auto" }) {
 
   function increment() {
     setQuantity((prevQuantity) => prevQuantity + 1);
+    updateContext();
   }
 
   return (
@@ -60,7 +79,7 @@ function Item({ itemResponse, displayButton = "auto" }) {
         )}
       </span>
       {!showDescription ? (
-        <Link to="/itemHome">
+        <Link to={itemResponse && `/itemHome/${itemResponse.id}`}>
           <div className={itemStyles.itemImage}>
             {itemResponse ? (
               <img
