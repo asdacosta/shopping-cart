@@ -1,11 +1,17 @@
 import homeStyles from "../stylesheets/HomePage.module.css";
 import { ids } from "./ids";
 import { Item } from "./Item";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import { PageContext } from "./HomePage";
 
 function WelcomePage() {
   const [response, setResponse] = useState(null);
+  const { page, setPage } = useContext(PageContext);
+
+  function highlightShop() {
+    setPage("shop");
+  }
 
   useEffect(() => {
     fetch(
@@ -33,7 +39,7 @@ function WelcomePage() {
     <>
       <section className={homeStyles.homeTitle}>
         <h2 className={homeStyles.header2}>Discover Latest Trends</h2>
-        <div>
+        <div onClick={highlightShop}>
           <Link className={homeStyles.link} to="shop">
             Shop Now
           </Link>
