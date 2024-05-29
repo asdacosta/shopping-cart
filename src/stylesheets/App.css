@@ -2,7 +2,8 @@ body * {
   /* border: 0.2rem solid teal; */
 }
 
-html {
+html,
+body {
   height: 100%;
 }
 
@@ -14,8 +15,6 @@ body {
 
   font-size: 1.2rem;
   color: white;
-  height: 100%;
-  /* overflow: hidden; */
 }
 
 #root {
@@ -28,7 +27,8 @@ body {
 }
 
 @media (max-width: 900px) {
+  html,
   body {
-    background-repeat: repeat;
+    height: auto;
   }
 }
