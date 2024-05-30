@@ -21,7 +21,6 @@ function WelcomePage() {
     )
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
         setResponse(response);
       })
       .catch((error) => console.error(error));
