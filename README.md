@@ -131,6 +131,7 @@ Developers, users, recruiters.
 - [ ] Separate fetching into a solitary file.
 - [ ] Refactor functionalities into a solitary class component.
 - [ ] Run tests
+- [ ] Replace quantity with input to enable user manually type quantity of items apart from incrementing and decrementing.
 
 </details>
 
