@@ -96,9 +96,9 @@ Developers, users, recruiters.
 <details>
 <summary>Invert</summary>
 
-| File             | Description                      |
-| ---------------- | -------------------------------- |
-| `src/assets/###` | Photo created by ### on [###](). |
+| File             | Description                                                |
+| ---------------- | ---------------------------------------------------------- |
+| `src/assets/###` | Photo created by Mnz on [Unsplash](https://unsplash.com/). |
 
 </details>
 
