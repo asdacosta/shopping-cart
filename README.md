@@ -27,7 +27,6 @@
 
 **Demo:**
 
-<img src="./readme-assets/folder.png" alt="folder">
 ![Live Demo](./readme-assets/shop.gif)
 
 <details>
