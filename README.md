@@ -27,7 +27,7 @@
 **Demo:**
 
 <img src="./readme-assets/folder.png" alt="folder">
-<!-- ![Live Demo](./readme-assets/) -->
+![Live Demo](./readme-assets/shop.gif)
 
 <details>
 
@@ -35,12 +35,12 @@
 
 **Desktop View:**
 
-<!-- <img src="./readme-assets/desktop.png" alt="desktop view"> -->
+<img src="./readme-assets/desktop.png" alt="desktop view">
 <br>
 
 **Mobile View:**
 
-<img src="./readme-assets/mobile.png" alt="desktop view">
+<img src="./readme-assets/mobile.png" alt="mobile view">
 
 </details>
 
@@ -127,6 +127,7 @@ Developers, users, recruiters.
 <details>
 <summary>Invert</summary>
 
+- [ ] Items in Cart should link to item home.
 - [ ] Separate fetching into a solitary file.
 - [ ] Refactor functionalities into a solitary class component.
 - [ ] Run tests
