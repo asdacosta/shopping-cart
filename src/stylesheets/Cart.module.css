@@ -17,7 +17,7 @@
 @keyframes reveal {
   to {
     opacity: 1;
-    width: 45rem;
+    width: 70%;
   }
 }
 
