@@ -7,7 +7,8 @@ import { ids } from "./ids";
 
 function Cart() {
   const [response, setResponse] = useState(null);
-  const { allAdded } = useContext(ShopContext);
+  const [subTotal, setSubTotal] = useState(0);
+  const { allAdded, allQuantity } = useContext(ShopContext);
 
   useEffect(() => {
     fetch(
@@ -17,11 +18,16 @@ function Cart() {
     )
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
         setResponse(response);
       })
       .catch((error) => console.error(error));
   }, []);
+
+  useEffect(() => {
+    if (response) {
+      calc();
+    }
+  }, [allAdded, allQuantity]);
 
   if (!response) {
     return;
@@ -34,6 +40,17 @@ function Cart() {
   });
 
   const isEmpty = !allAdded.includes(true);
+
+  function calc() {
+    let total = 0;
+    allAdded.forEach((item, index) => {
+      if (item) {
+        total += allQuantity[index] * response[index].price;
+      }
+    });
+    const trimmedTotal = parseFloat(total.toFixed(2));
+    setSubTotal(trimmedTotal);
+  }
 
   return (
     <section className={cartStyles.cover}>
@@ -52,8 +69,7 @@ function Cart() {
       <h2 className={cartStyles.header2}>Summary</h2>
       <section className={cartStyles.summary}>
         <p>
-          <span>SubTotal: </span>
-          <span>0</span>
+          <span>SubTotal: $ {subTotal}</span>
         </p>
         <button>Proceed to Checkout</button>
       </section>
