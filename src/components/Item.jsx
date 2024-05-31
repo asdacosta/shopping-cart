@@ -14,12 +14,17 @@ function Item({ itemResponse, displayButton = "auto" }) {
   useEffect(() => {
     if (!itemResponse) {
       setPointer("none");
-      return;
     }
+  }, [itemResponse]);
+
+  useEffect(() => {
     updateContext();
   }, [added, quantity]);
 
   function updateContext() {
+    if (!itemResponse) {
+      return;
+    }
     const newAllAdded = [...allAdded];
     const index = itemResponse.id - 1;
     newAllAdded[index] = added;
@@ -40,14 +45,12 @@ function Item({ itemResponse, displayButton = "auto" }) {
 
   function triggerAdded() {
     setAdded(true);
-    updateContext();
   }
 
   function decrement() {
     setQuantity((prevQuantity) => {
       if (prevQuantity === 1) {
         setAdded(false);
-        updateContext();
         return prevQuantity;
       }
       return prevQuantity - 1;
@@ -56,7 +59,6 @@ function Item({ itemResponse, displayButton = "auto" }) {
 
   function increment() {
     setQuantity((prevQuantity) => prevQuantity + 1);
-    updateContext();
   }
 
   return (
