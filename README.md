@@ -107,7 +107,9 @@ Developers, users, recruiters.
 <details>
 <summary>Invert</summary>
 
-- [ ] ###
+- [ ] Separate fetching into a solitary file.
+- [ ] Refactor functionalities into a solitary class component.
+- [ ] Run tests
 
 </details>
 
