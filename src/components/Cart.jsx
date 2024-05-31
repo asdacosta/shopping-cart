@@ -2,13 +2,14 @@ import cartStyles from "../stylesheets/Cart.module.css";
 import { Link } from "react-router-dom";
 import { CartItem } from "./CartItem";
 import { useState, useEffect, useContext } from "react";
-import { ShopContext } from "./HomePage";
+import { ShopContext, PageContext } from "./HomePage";
 import { ids } from "./ids";
 
 function Cart() {
   const [response, setResponse] = useState(null);
   const [subTotal, setSubTotal] = useState(0);
   const { allAdded, allQuantity } = useContext(ShopContext);
+  const { page, setPage } = useContext(PageContext);
 
   useEffect(() => {
     fetch(
@@ -31,6 +32,10 @@ function Cart() {
 
   if (!response) {
     return;
+  }
+
+  function highlightShop() {
+    setPage("shop");
   }
 
   const cartItems = allAdded.map((added, index) => {
@@ -59,7 +64,7 @@ function Cart() {
         <section className={cartStyles.items}>
           <p>Your cart is empty.</p>
           <Link className={cartStyles.link} to="/shop">
-            <button>Add Items</button>
+            <button onClick={highlightShop}>Add Items</button>
           </Link>
         </section>
       ) : (
