@@ -22,10 +22,10 @@ function HomePage() {
   return (
     <>
       <PageContext.Provider value={{ page, setPage }}>
-        <Nav />
         <ShopContext.Provider
           value={{ allAdded, allQuantity, setAllAdded, setAllQuantity }}
         >
+          <Nav />
           <Outlet />
         </ShopContext.Provider>
       </PageContext.Provider>
