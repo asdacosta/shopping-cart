@@ -69,6 +69,13 @@
   cursor: pointer;
 }
 
+.link button:hover,
+.summary button:hover {
+  color: white;
+  background-color: rgba(5, 17, 32, 0.9);
+  border: 0.1rem solid rgb(103, 166, 248);
+}
+
 .cart {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(2, 1fr);
