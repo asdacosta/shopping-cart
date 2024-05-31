@@ -46,22 +46,22 @@
 
 ## 🌐 Origin
 
-<!-- [The Odin Project](https://www.theodinproject.com/) -->
+[The Odin Project](https://www.theodinproject.com/)
 
 ## 📝 Description
 
-Store all template files.
+Builds a Shopping Cart.
 
 <details>
 <summary>Features</summary>
 
-- ###
+- No special features
 
 </details>
 
 ## 🎯 Relevance
 
-To solidify concepts of `###` in ###.
+To solidify concepts of `Context API, Router, Fetching Data, Styling` in React.
 
 ## 👥 Intended Audience
 
