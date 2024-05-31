@@ -22,7 +22,7 @@
     <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React badge">
     <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite badge">
     <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel badge">
-    <h4><a href="https://asdacosta.github.io/https://shopping-cart-sage-three.vercel.app//">Live Preview</a></h4>
+    <h4><a href="https://shopping-cart-sage-three.vercel.app/">Live Preview</a></h4>
 </div>
 
 **Demo:**
