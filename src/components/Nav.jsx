@@ -4,7 +4,6 @@ import { useContext, useState } from "react";
 import { PageContext } from "./HomePage";
 
 function Nav() {
-  // const [page, setPage] = useState("home");
   const { page, setPage } = useContext(PageContext);
 
   function highlightShop() {
