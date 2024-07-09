@@ -65,7 +65,7 @@ To solidify concepts of `Context API, Router, Fetching Data, Styling` in React.
 
 ## 👥 Intended Audience
 
-Developers, users, recruiters.
+Developers, users, and non-developers.
 
 > [!NOTE]
 > Users can install all dependencies using `package.json` file via:
