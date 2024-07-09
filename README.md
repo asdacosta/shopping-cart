@@ -139,9 +139,4 @@ Developers, users, recruiters.
 
 1. [Abraham Da Costa Silvanus](https://github.com/asdacosta)
 
-<br>
-
-> [!IMPORTANT]
-> Seek contributor's consent for any code usage.
-
-**[🞁 Top](#template)**
+**[🞁 Top](#shopping-cart)**
