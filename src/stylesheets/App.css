@@ -1,6 +1,6 @@
-body * {
-  /* border: 0.2rem solid teal; */
-}
+/* body * {
+  border: 0.2rem solid teal;
+} */
 
 html,
 body {
@@ -23,7 +23,7 @@ body {
   letter-spacing: 0.1rem;
   gap: 2rem;
   background-color: rgba(0, 0, 0, 0.45);
-  height: 100%;
+  min-height: 100vh;
 }
 
 @media (max-width: 900px) {
