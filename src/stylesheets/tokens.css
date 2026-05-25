@@ -1,0 +1,83 @@
+:root {
+  /* Palette — warm luxury noir */
+  --color-ink: #0a0908;
+  --color-ink-elevated: #141210;
+  --color-ink-muted: #1e1c19;
+  --color-surface: #1a1816;
+  --color-surface-raised: #24211e;
+  --color-surface-glass: rgba(26, 24, 22, 0.72);
+  --color-border: rgba(245, 240, 232, 0.08);
+  --color-border-strong: rgba(245, 240, 232, 0.16);
+
+  --color-cream: #f5f0e8;
+  --color-cream-muted: rgba(245, 240, 232, 0.72);
+  --color-cream-subtle: rgba(245, 240, 232, 0.48);
+
+  --color-copper: #c9a962;
+  --color-copper-bright: #e0c078;
+  --color-copper-dim: rgba(201, 169, 98, 0.35);
+  --color-rose: #c4a09a;
+  --color-success: #7eb89a;
+  --color-error: #d4847a;
+  --color-warning: #d4b87a;
+
+  /* Typography */
+  --font-display: "Cormorant Garamond", "Georgia", serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.75rem;
+  --text-hero: clamp(2.5rem, 6vw, 4.5rem);
+
+  /* Spacing rhythm */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Layout */
+  --max-width: 1280px;
+  --nav-height: 4.25rem;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Depth */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.55);
+  --shadow-glow: 0 0 40px rgba(201, 169, 98, 0.12);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 280ms;
+  --duration-slow: 480ms;
+
+  /* Focus */
+  --focus-ring: 0 0 0 2px var(--color-ink), 0 0 0 4px var(--color-copper);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-normal: 0ms;
+    --duration-slow: 0ms;
+  }
+}

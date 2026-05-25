@@ -1,0 +1,39 @@
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.stars {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.stars svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.sm .stars svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.filled {
+  fill: var(--color-copper);
+}
+
+.empty {
+  fill: var(--color-border-strong);
+}
+
+.value {
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+
+.count {
+  font-size: var(--text-xs);
+  color: var(--color-cream-subtle);
+}

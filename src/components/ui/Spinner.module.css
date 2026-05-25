@@ -1,0 +1,42 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ring {
+  display: block;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-copper);
+  animation: spin 0.8s linear infinite;
+}
+
+.sm .ring {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.md .ring {
+  width: 2rem;
+  height: 2rem;
+}
+
+.lg .ring {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ring {
+    animation: none;
+    border-top-color: var(--color-copper);
+    opacity: 0.8;
+  }
+}
