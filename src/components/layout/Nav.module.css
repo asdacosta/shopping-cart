@@ -1,0 +1,149 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(16px);
+  background: var(--color-surface-glass);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  min-height: var(--nav-height);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-right: auto;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+.brandMark {
+  color: var(--color-copper);
+  font-size: 0.65em;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.link {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-cream-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  position: relative;
+  padding-block: var(--space-1);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.link:hover {
+  color: var(--color-cream);
+}
+
+.active {
+  color: var(--color-copper-bright);
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 1px;
+  background: var(--color-copper);
+}
+
+.badge {
+  margin-left: var(--space-1);
+  font-size: var(--text-xs);
+  color: var(--color-copper);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.cartBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  transition: border-color var(--duration-fast) var(--ease-out);
+}
+
+.cartBtn:hover {
+  border-color: var(--color-copper-dim);
+}
+
+.icon {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.cartCount {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 1.1rem;
+  height: 1.1rem;
+  padding: 0 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1.1rem;
+  text-align: center;
+  background: var(--color-copper);
+  color: var(--color-ink);
+  border-radius: var(--radius-full);
+}
+
+.promoStrip {
+  background: linear-gradient(
+    90deg,
+    rgba(201, 169, 98, 0.12),
+    rgba(196, 160, 154, 0.08)
+  );
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-2) 0;
+  font-size: var(--text-xs);
+  color: var(--color-cream-muted);
+  text-align: center;
+}
+
+.promoStrip strong {
+  color: var(--color-copper-bright);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .links .link:not(:last-child):not(:first-child) {
+    display: none;
+  }
+
+  .links {
+    gap: var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .brandText {
+    font-size: var(--text-lg);
+  }
+}
