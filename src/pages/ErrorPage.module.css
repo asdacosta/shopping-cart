@@ -1,0 +1,19 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  min-height: 60vh;
+  text-align: center;
+  padding: var(--space-8);
+}
+
+.page h1 {
+  font-size: var(--text-3xl);
+}
+
+.message {
+  color: var(--color-cream-muted);
+  max-width: 24rem;
+}
