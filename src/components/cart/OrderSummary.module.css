@@ -1,0 +1,94 @@
+.summary {
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  position: sticky;
+  top: calc(var(--nav-height) + var(--space-4));
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 500;
+}
+
+.shippingNote {
+  font-size: var(--text-xs);
+  color: var(--color-copper);
+  padding: var(--space-3);
+  background: rgba(201, 169, 98, 0.08);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-copper-dim);
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-sm);
+  color: var(--color-cream-muted);
+}
+
+.row dd {
+  color: var(--color-cream);
+  font-weight: 500;
+}
+
+.discount dd {
+  color: var(--color-success);
+}
+
+.total {
+  padding-top: var(--space-4);
+  margin-top: var(--space-2);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-base);
+}
+
+.total dt,
+.total dd {
+  font-weight: 600;
+  color: var(--color-cream);
+}
+
+.total dd {
+  font-size: var(--text-xl);
+  color: var(--color-copper-bright);
+}
+
+.promo {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.promo input {
+  flex: 1;
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-sm);
+  background: var(--color-ink-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-cream);
+}
+
+.promoError {
+  font-size: var(--text-xs);
+  color: var(--color-error);
+}
+
+.checkout {
+  display: block;
+}
+
+.checkoutBtn {
+  width: 100%;
+}
