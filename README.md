@@ -1,138 +1,134 @@
-<div align='center'>
+<div align="center">
 
-# Shopping Cart
+# EverTrend
+
+**A premium React ecommerce storefront with curated product discovery, cart, and checkout.**
+
+[![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)](https://reactrouter.com/)
+[![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)](https://eslint.org/)
+[![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black)](https://prettier.io/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+
+### [Live preview](https://shopping-cart-sage-three.vercel.app/)
 
 </div>
-<div align='center'>
-    <h3>💻 Technologies</h3>
-    <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux badge">
-    <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code badge">
-    <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git badge">
-    <img src="https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=webpack&logoColor=black" alt="Webpack badge">
-    <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js badge">
-    <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" alt="npm badge">
-    <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint badge">
-    <img src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black" alt="Prettier badge">
-    <img src="https://img.shields.io/badge/Babel-F7B93E?style=for-the-badge&logo=babel&logoColor=black" alt="Babel badge">
-    <img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white" alt="Jest badge">
-    <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React badge">
-    <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite badge">
-    <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel badge">
-    <h4><a href="https://shopping-cart-sage-three.vercel.app/">Live Preview</a></h4>
-</div>
 
-**Demo:**
+## Demo
 
-![Live Demo](./readme-assets/shop.gif)
+![EverTrend storefront demo](./readme-assets/shop.gif)
 
 <details>
+<summary>Screen views</summary>
 
-**<summary>Screen views</summary>**
+**Desktop**
 
-**Desktop View:**
+<img src="./readme-assets/desktop.png" alt="EverTrend desktop view — home hero and featured collection" width="100%">
 
-<img src="./readme-assets/desktop.png" alt="desktop view">
-<br>
+**Mobile**
 
-**Mobile View:**
-
-<img src="./readme-assets/mobile.png" alt="mobile view">
+<img src="./readme-assets/mobile.png" alt="EverTrend mobile view — shop catalog with filters" width="390">
 
 </details>
 
-## 🌐 Origin
+## Overview
 
-[The Odin Project](https://www.theodinproject.com/)
+EverTrend is a polished single-page ecommerce experience built with React. It fetches a live product catalog from the [Fake Store API](https://fakestoreapi.com/), layers in local enrichment (variants, reviews, promos), and persists cart, wishlist, and order data in the browser.
 
-## 📝 Description
+Originally created as a [The Odin Project](https://www.theodinproject.com/) learning exercise, the app has since been redesigned into a full storefront with search, filtering, product detail, multi-step checkout, and account-style order history.
 
-Builds a Shopping Cart.
+## Features
 
-<details>
-<summary>Features</summary>
+- **Storefront** — Hero landing page, featured products, and category discovery
+- **Shop** — Search, category filter, rating filter, and sortable product grid
+- **Product detail** — Image gallery, size/color variants, reviews, related products, wishlist
+- **Cart** — Quantity controls, promo codes (`WELCOME15`, `LUXE10`), shipping/tax breakdown
+- **Checkout** — Three-step flow (shipping → payment → review) with order confirmation
+- **Wishlist** — Save and revisit products (persisted locally)
+- **Account** — Order history and recently viewed products
+- **UX** — Loading skeletons, empty states, responsive layout, reduced-motion support, keyboard focus styles
 
-- No special features
+## Tech stack
 
-</details>
+| Layer | Tools |
+| --- | --- |
+| UI | React 18, CSS Modules, design tokens |
+| Routing | React Router 6 |
+| Build | Vite 5 |
+| Data | Fake Store API + cached service layer |
+| State | React Context + `useReducer` (cart, wishlist, promos) |
+| Persistence | `localStorage` |
+| Deploy | Vercel (SPA rewrites) |
 
-## 🎯 Relevance
+## Getting started
 
-To solidify concepts of `Context API, Router, Fetching Data, Styling` in React.
+### Prerequisites
 
-## 👥 Intended Audience
+- [Node.js](https://nodejs.org/) 18+
+- npm 9+
 
-Developers, users, and non-developers.
+### Install and run
 
-> [!NOTE]
-> Users can install all dependencies using `package.json` file via:
->
-> ```bash
-> npm install
-> ```
+```bash
+git clone https://github.com/asdacosta/shopping-cart.git
+cd shopping-cart
+npm install
+npm run dev
+```
 
-## 📂 Files
+Open [http://localhost:5173](http://localhost:5173).
 
-<details>
-<summary>Invert</summary>
+### Scripts
 
-| File                                 | Description                                                                                                                                                             |
-| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `src/*`                              | Source files that are bundled into the output directory `dist/`.                                                                                                        |
-| `src/main.jsx`                       | The main JavaScript entry point that bundling begins.                                                                                                                   |
-| `src/App.jsx`                        | Main component where overall structure and other layout components of the app are contained.                                                                            |
-| `src/assets/*`                       | All assets(imgs, icons, vids) used in website.                                                                                                                          |
-| `src/components/Cart.jsx`            | Displays Cart.                                                                                                                                                          |
-| `src/components/CartItem.jsx`        | Creates added cart items in `Cart.jsx`.                                                                                                                                 |
-| `src/components/ErrorPage.jsx`       | Display error if anything goes wrong.                                                                                                                                   |
-| `src/components/ids.jsx`             | Generate unique strings for arrays in `map`.                                                                                                                            |
-| `src/components/Item.jsx`            | Creates shop items.                                                                                                                                                     |
-| `src/components/ItemHome.jsx`        | Displays shop item details.                                                                                                                                             |
-| `src/components/Nav.jsx`             | Display navigation.                                                                                                                                                     |
-| `src/components/HomePage.jsx`        | Main home page.                                                                                                                                                         |
-| `src/components/routes.jsx`          | Creates routes in `HomePage.jsx`.                                                                                                                                       |
-| `src/components/ShopPage.jsx`        | Main shop page.                                                                                                                                                         |
-| `src/components/WelcomePage.jsx`     | Displays buyable items at `HomePage.jsx`.                                                                                                                               |
-| `src/stylesheet/App.css`             | Stylesheet for `App.jsx`.                                                                                                                                               |
-| `src/stylesheet/Cart.module.css`     | Stylesheet for `Cart.jsx` and `CartItem.jsx`.                                                                                                                           |
-| `src/stylesheet/HomePage.module.css` | Stylesheet for `HomePage.jsx`.                                                                                                                                          |
-| `src/stylesheet/Item.module.css`     | Stylesheet for `Item.jsx`.                                                                                                                                              |
-| `src/stylesheet/ItemHome.module.css` | Stylesheet for `ItemHome.jsx`.                                                                                                                                          |
-| `src/stylesheet/Nav.module.css`      | Stylesheet for `Nav.jsx`.                                                                                                                                               |
-| `src/stylesheet/ShopPage.module.css` | Stylesheet for `ShopPage.jsx`.                                                                                                                                          |
-| `src/stylesheet/reset.css`           | ets style to default for consistency across different devices and browsers..                                                                                            |
-| `dist/*`                             | Output files from bundling of files in directory `src/`.                                                                                                                |
-| `dist/main.js`                       | Main JavaScript output file that contains the bundled JavaScript code. Code is minified and optimized for deployment (Due to mode set to production in webpack config). |
-| `package*`                           | Contains details of project and dependencies versions.                                                                                                                  |
-| `readme-assets/*`                    | Live demo and different screen views used in `README.md`.                                                                                                               |
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Production build to `dist/` |
+| `npm run preview` | Serve the production build locally |
+| `npm run lint` | Run ESLint |
 
-</details>
+## Project structure
 
-## ©️ Credit
+```text
+src/
+├── components/
+│   ├── cart/          # Cart line items, order summary
+│   ├── layout/        # Nav, footer, page shell
+│   ├── product/       # Cards, grid, filters, reviews
+│   └── ui/            # Buttons, spinners, ratings, etc.
+├── context/           # ShopProvider + cart reducer
+├── data/              # Product enrichment (variants, reviews, promos)
+├── hooks/             # useProducts, useCartTotals
+├── pages/             # Route-level screens
+├── services/          # productApi (fetch + cache)
+├── stylesheets/       # tokens, global, reset
+└── utils/             # Filter/sort helpers
+```
 
-<details>
-<summary>Invert</summary>
+## Deployment
 
-| File             | Description                                                |
-| ---------------- | ---------------------------------------------------------- |
-| `src/assets/###` | Photo created by Mnz on [Unsplash](https://unsplash.com/). |
+The app is configured for Vercel with SPA fallback (`vercel.json` rewrites all routes to `index.html`). After `npm run build`, deploy the `dist/` output or connect the repo to Vercel for automatic builds.
 
-</details>
+## Regenerating README media
 
-## 🔄 Improvements
+With the preview server running (`npm run preview`), capture fresh screenshots and demo GIF:
 
-<details>
-<summary>Invert</summary>
+```bash
+# One-time: npm install -D playwright gifenc pngjs && npx playwright install chromium
+node scripts/capture-readme-assets.mjs
+```
 
-- [ ] Items in Cart should link to item home.
-- [ ] Separate fetching into a solitary file.
-- [ ] Refactor functionalities into a solitary class component.
-- [ ] Run tests
-- [ ] Replace quantity with input to enable user manually type quantity of items apart from incrementing and decrementing.
+Assets are written to `readme-assets/` (`shop.gif`, `desktop.png`, `mobile.png`).
 
-</details>
+## Roadmap
 
-## 👤 Curator
+- [ ] Add automated tests (unit + e2e)
+- [ ] Cart line items linking directly to product pages
+- [ ] Manual quantity input on product and cart screens
 
-1. [Abraham Da Costa Silvanus](https://github.com/asdacosta)
+## Author
 
-**[🞁 Top](#shopping-cart)**
+[Abraham Da Costa Silvanus](https://github.com/asdacosta)
+
+**[↑ Back to top](#evertrend)**
